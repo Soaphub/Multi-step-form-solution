@@ -1,107 +1,360 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+*{
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+:root{
+    --spacing-lg: 8rem;
+    --spacing-md: 4rem;
+    --spacing-sm: 2rem;
+    --spacing-xsm: 1rem;
+    --spacing-xxsm: 0.5rem;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+    --font-size-xl: 2.4rem;
+    --font-size-lg: 1.4rem;
+    --font-size-md: 1.2rem;
+    --font-size-sm: 1.1rem;
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+    --image-width-lg: 5rem;
+    --image-width-sm: 3rem;
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+    --width-lg: 60%;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+body{
+    background-color: hsl(217, 100%, 97%);
+    font-family: 'Ubuntu', sans-serif;
+    width: var(--width-lg);
+    padding: var(--spacing-lg) 0;
+    margin: auto;
+}
+.conatiner{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: var(--spacing-xsm);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    flex-grow: 1;
+    padding: 0 var(--spacing-lg) 0 var(--spacing-sm);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    flex-grow: 1;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+h1{
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+}
+h2, .card-title{
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: hsl(213, 96%, 30%);
+}
+h3{
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: hsl(213, 96%, 30%);
+}
+p{
+    font-size: var(--font-size-sm);
+    color: hsl(231, 11%, 63%);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Navbar */
+.nav{
+    --lg: calc( 2 * var(--spacing-lg));
+    --sm: calc( 2 * var(--spacing-xsm)); 
+    height: calc( 100vh - calc( var(--lg) + var(--sm)));
+    background-image: url("../public/images/bg-sidebar-desktop.svg"); 
+    background-size: auto calc( 100vh - calc( var(--lg) + var(--sm)));
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.nav ul{
+    flex-grow: 1;
+    padding-top: var(--spacing-md);
+    padding-left: var(--spacing-sm);
+}
+.nav li{
+    margin-bottom: var(--spacing-sm);
+    align-items: center;
+}
+.nav li a{
+    margin-right: var(--spacing-xsm);
+    padding: var(--spacing-xxsm) var(--spacing-xsm);
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    border: 0.1rem solid hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+.nav li a.active{
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+    border: 0.1rem solid hsl(206, 94%, 87%);
+}
+.nav li h1{
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    color: hsl(228, 100%, 84%);
+}
+.nav li h2{
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Home Page */
+label, input[type=text], input[type=email], input[type=tel], 
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: var(--font-size-md);
+    color: hsl(213, 96%, 30%);
+}
+.invalid-feedback, .plan-noselect{ /* Warning Message */
+    text-align: end;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: hsl(354, 84%, 57%);
+}
+.plan-slected{
+    display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Buttons */
+.next-button, .back-button, .cofirm-button{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+.next-button{
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+}
+.next-button:hover{
+    background-color: hsl(213, 96%, 30%);
+    color: white;
+}
+.back-button{
+    color: hsl(231, 11%, 63%);
+}
+.back-button:hover{
+    color: hsl(213, 96%, 18%);
+}
+.cofirm-button{
+    background-color: hsl(243, 100%, 62%);
+    color: white;
+}
+.cofirm-button:hover{
+    color: white;
+    background-color: hsl(243, 100%, 75%);;
+}
+
+/* Plan Page*/
+.card{
+    padding: var(--spacing-xsm);
+    cursor: pointer;
+}
+.card.edit{
+    background-color: hsl(231, 100%, 99%);
+    border: 0.1rem solid hsl(213, 96%, 30%);
+}
+.plan-icon{
+    width: var(--image-width-sm);
+    height: var(--image-width-sm);
+}
+#plan .form-switch .form-check-input {
+    cursor: pointer;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-image: var(--bs-form-switch-bg);
+}
+
+/* Add On's page  */
+#add-ons .form-check{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-xsm);
+    border: 0.05rem solid hsl(229, 24%, 87%);
+}
+#add-ons .form-check.checked{
+    background-color: hsl(231, 100%, 99%);
+    border: 0.1rem solid hsl(213, 96%, 30%);
+}
+
+/* Summary page */
+.price-table{
+    padding: var(--spacing-sm) var(--spacing-sm) 0;
+    margin-bottom: var(--spacing-sm);
+    background-color: hsl(231, 100%, 99%);
+}
+.price-table .row > div:last-child{
+    text-align: right;
+}
+.price-table-header{
+    margin-bottom: var(--spacing-xsm);
+    padding-bottom: var(--spacing-xsm);
+    border-bottom: 0.05rem solid hsl(229, 24%, 87%);
+}
+.total-price{
+    padding: 0 var(--spacing-sm);
+}
+.total-price > div:last-child{
+    padding-right: var(--spacing-sm);
+    text-align: right;
+}
+
+@media (max-width: 992px) {
+    body{
+        padding: 0;
+        width: 100%;
+        background-color: white;
+    }
+    .main{
+        padding: 0 16px;
+    }
+    h1{
+        font-size: var(--font-size-lg);
+    }
+    .conatiner{
+        background-color: hsl(217, 100%, 97%);
+        padding: 0 16px;
+        border-radius: 0;
+    }
+    .layout > div, .nav ul{
+        padding: 0;
+    }
+    .nav ul{
+        margin-top: var(--spacing-sm);
+    }
+    .nav{
+        height: auto;
+        background-image: url("../public/images/bg-sidebar-mobile.svg");
+        background-size: 100%;
+        padding: var(--spacing-md) 0 var(--spacing-lg);
+        border-radius: 0;
+    }
+    .nav li a{
+        margin: var(--spacing-xsm);
+    }
+
+    .pop-Up{
+        background-color: white;
+        position: relative;
+        padding: var(--spacing-md) var(--spacing-sm);
+        margin-bottom: calc( var(--spacing-lg) * 2.5);
+        top: -10%;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    :root{
+    --spacing-lg: 5rem;
+    --spacing-md: 1.9rem;
+    --spacing-sm: 1.15rem;
+    --spacing-xsm: 0.8rem;
+    --spacing-xxsm: 0.3rem;
+    
+    --font-size-lg: 1.4rem;
+    --font-size-md: 0.9rem;
+    --font-size-sm: 0.9rem;
+    }
+}
+
+@media (max-width: 767.98px) and (min-width: 576px){
+    :root{
+    --spacing-lg: 6rem;
+    --spacing-md: 3rem;
+    --spacing-sm: 1.5rem;
+    --spacing-xsm: 1rem;
+    --spacing-xxsm: 0.6rem;
+    
+    --font-size-lg: 1.8rem;
+    --font-size-md: 1.3rem;
+    --font-size-sm: 1rem;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px){
+    :root{
+        
+        --spacing-lg: 8rem;
+        --spacing-md: 4rem;
+        --spacing-sm: 1.75rem;
+        --spacing-xsm: 1.25rem;
+        --spacing-xxsm: 0.7rem;
+    
+        --font-size-lg: 1.9rem;
+        --font-size-md: 1.4rem;
+        --font-size-sm: 1.1rem;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px){
+    :root{
+    --spacing-lg: 5rem;
+    --spacing-md: 2.5rem;
+    --spacing-sm: 1.25rem;
+    --spacing-xsm: 0.6rem;
+    --spacing-xxsm: 0.3rem;
+
+    --font-size-xl: 2rem;
+    --font-size-lg: 1rem;
+    --font-size-md: 0.9rem;
+    --font-size-sm: 0.8rem;
+
+    --width-lg: 70%;
+    }
+}
+
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+    :root{
+    --spacing-lg: 6rem;
+    --spacing-md: 3rem;
+    --spacing-sm: 1.5rem;
+    --spacing-xsm: 0.6rem;
+    --spacing-xxsm: 0.3rem;
+
+    --font-size-xl: 2.1rem;
+    --font-size-lg: 1.1rem;
+    --font-size-md: 1rem;
+    --font-size-sm: 0.9rem;
+
+    --width-lg: 65%;
+    }
+}
+
+@media (max-width: 1599.98px) and (min-width: 1400px) {
+    :root{
+    --spacing-lg: 7rem;
+    --spacing-md: 3.5rem;
+    --spacing-sm: 1.75rem;
+    --spacing-xsm: 0.8rem;
+    --spacing-xxsm: 0.4rem;
+
+    --font-size-xl: 2.2rem;
+    --font-size-lg: 1.2rem;
+    --font-size-md: 1.1rem;
+    --font-size-sm: 1rem;
+
+    --width-lg: 65%;
+    }
 }
