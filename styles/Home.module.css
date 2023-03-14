@@ -22,7 +22,7 @@
 
 .next{
     display: flex;
-    justify-content:end;
+    justify-content: flex-end;
     margin-top: var(--spacing-md);
 }
 .back{
