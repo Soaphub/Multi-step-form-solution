@@ -31,8 +31,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Solution URL: [https://github.com/Soaphub/Multi-step-form-solution]
+- Live Site URL: [https://multi-step-form-solution.vercel.app/]
 
 ## My process
 
