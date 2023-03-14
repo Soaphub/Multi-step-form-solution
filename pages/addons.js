@@ -1,5 +1,6 @@
 import React from 'react';
 import UseHooks from '@/Hooks/useHooks';
+import styles from "../styles/Home.module.css"
 import { useRouter } from 'next/router';
 import { useSelector} from 'react-redux'
 
@@ -38,7 +39,7 @@ const Addons = () => {
             <div  id="one-checked" className={ add1 === "one-check" ?  "form-check mb-3 checked":"form-check mb-3"}>
                 <input  onClick={handleCheck} id="one-check" className="form-check-input" type="checkbox" value=""
                 checked={add1 ==="one-check" ? true : false} readOnly></input>
-                <div className="addons">
+                <div className={styles.addons}>
                     <h2>Online Service</h2>
                     <p >Access to multiplayer game</p>
                 </div>
@@ -47,7 +48,7 @@ const Addons = () => {
             <div  id="sec-checked" className={ add2 === "sec-check" ?  "form-check mb-3 checked":"form-check mb-3"}>
                 <input  onClick={handleCheck} id="sec-check" className="form-check-input" type="checkbox" value=""
                 checked={add2 === "sec-check" ? true : false} readOnly></input>
-                <div className="addons">
+                <div className={styles.addons}>
                     <h2>Large storage</h2>
                     <p >Extra 1TB of could save</p>
                 </div>
@@ -56,13 +57,13 @@ const Addons = () => {
             <div  id="trd-checked" className={ add3 === "trd-check" ?  "form-check mb-3 checked":"form-check mb-3"}>
                 <input  onClick={handleCheck} id="trd-check" className="form-check-input" type="checkbox" value=""
                 checked={ add3 === "trd-check" ? true : false} readOnly></input>
-                <div className="addons">
+                <div className={styles.addons}>
                     <h2>Customizable profile</h2>
                     <p >Custom theme on your profile</p>
                 </div>
                 { yearly===true ?  <h3>+$20/yr</h3> : <h3>+$2/mo</h3> }
             </div> 
-            <div className="back">
+            <div className={styles.back}>
                 <button onClick={handleBack} className='btn btn-lg back-button'>Go Back</button>
                 <input onClick={handleNext} type='submit' className="btn btn-lg next-button" value="Next Step"></input>
             </div>

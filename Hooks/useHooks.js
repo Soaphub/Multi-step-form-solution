@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import {useSelector, useDispatch} from 'react-redux';
-import { level, extraPlan, removeExtraPlan, planTotal, addOnsTotal} from "../pages/redux/subscription";
+import { level, extraPlan, removeExtraPlan, planTotal, addOnsTotal} from "../redux/subscription";
 
 const UseHooks = () => {
 	const [screenSize, setScreenSize]= useState(false);

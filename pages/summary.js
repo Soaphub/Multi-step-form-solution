@@ -1,5 +1,6 @@
 import React from 'react';
 import UseHooks from '@/Hooks/useHooks';
+import styles from "../styles/Home.module.css"
 import { useRouter } from 'next/router';
 import FinishingPage from '@/Components/FinishingPage';
 import Link from 'next/link';
@@ -25,7 +26,7 @@ const Summary = () => {
                     <h1>Finishing up</h1>
                     <p>Double check everthing looks Ok before confirming.</p>
                 </div>
-                <div className="price">
+                <div className={styles.price}>
                     <div className='row price-table'>
                         {   planLevel ?
                             <>
@@ -36,7 +37,7 @@ const Summary = () => {
                                             : ( planLevel === "sec-plan" ? "Adcanced("+ (yearly===true ? "Yearly": "Monthly" ) +")" 
                                             : "Pro("+ (yearly===true ? "Yearly": "Monthly" ) +")" )}
                                         </h2>
-                                        <Link className="summarylink" href="/plan">Change</Link>
+                                        <Link className={styles.summarylink} href="/plan">Change</Link>
                                     </div>
                                     <div className='col-4'>
                                         <h2>
@@ -70,7 +71,7 @@ const Summary = () => {
                                 </>
                             </>:
                             <div className='row price-table-header'>
-                                <Link className="summarylink" href="/plan">PLease select a plan</Link>
+                                <Link className={styles.summarylink} href="/plan">PLease select a plan</Link>
                             </div>
                         }
                     </div>
@@ -87,7 +88,7 @@ const Summary = () => {
                             </div>
                     </div>
                 </div> 
-                <div className="back">
+                <div className={styles.back}>
                     <button onClick={handleBack} className='btn btn-lg back-button'>Go Back</button>
                     <button onClick={handleConfirm} className="btn btn-lg cofirm-button">Confirm</button>
                 </div>
