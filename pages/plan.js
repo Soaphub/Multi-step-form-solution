@@ -1,6 +1,5 @@
 import React from 'react';
 import UseHooks from '@/Hooks/useHooks';
-import styles from "../styles/Home.module.css"
 import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux'
 import { validity} from "./redux/subscription"
@@ -161,15 +160,15 @@ const Plan = () => {
             </div>
         </div>
         <form >
-            <div className={styles.validity}>
-                <h2 onClick={handleSwitch} className={yearly===true ? styles.editplan: ""}>Montly</h2>
+            <div className="validity">
+                <h2 onClick={handleSwitch} className={yearly===true ? "editplan": ""}>Montly</h2>
                 <div className="form-check form-switch">
                     <input onClick={handleSwitch} className="form-check-input" type="checkbox"
                      checked={yearly===true ? true : false} readOnly></input>
                 </div>
-                <h2 onClick={handleSwitch} className={yearly===false ? styles.editplan: ""}>Yearly</h2>
+                <h2 onClick={handleSwitch} className={yearly===false ? "editplan": ""}>Yearly</h2>
             </div> 
-            <div className={styles.back}>
+            <div className="back">
                 <button onClick={handleBack} className='btn btn-lg back-button'>Go Back</button>
                 <input type='submit' onClick={handleNext} className="btn btn-lg next-button" value="Next Step"></input>
             </div>

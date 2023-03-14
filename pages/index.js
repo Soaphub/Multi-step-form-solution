@@ -1,6 +1,5 @@
 import UseHooks from '@/Hooks/useHooks';
 import React, {useEffect, useState} from 'react';
-import styles from "../styles/Home.module.css"
 
 const Index = () => {
 	const {screenSize, validateForm} = UseHooks();
@@ -62,7 +61,7 @@ const Index = () => {
 				  Please enter valid phone number
 				</div>
 			</div>
-			<div className={styles.next}>
+			<div className= "next">
 				<input onClick={handleSubmit} type='submit' className="btn btn-lg next-button" value="Next Step"></input>
 			</div>
 		</form>
