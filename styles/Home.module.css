@@ -67,10 +67,10 @@
     .next, .back{
         background-color: white;
         position: absolute;
-        margin-top:calc( var(--spacing-lg) * 3.5);
+        margin-top:calc( var(--spacing-lg) * 2);
         left: 50%;
         transform: translate(-50%);
         width: 100vw;
-        padding: var(--spacing-md) var(--spacing-sm);
+        padding: var(--spacing-sm);
     }
 }

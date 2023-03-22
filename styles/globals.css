@@ -280,7 +280,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
         background-color: white;
         position: relative;
         padding: var(--spacing-md) var(--spacing-sm);
-        margin-bottom: calc( var(--spacing-lg) * 2);
+        margin-bottom: calc( var(--spacing-lg) * 1.5);
         top: -10%;
         left: 50%;
         transform: translate(-50%);
