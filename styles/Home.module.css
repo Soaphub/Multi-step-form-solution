@@ -37,6 +37,32 @@
     color: hsl(231, 11%, 63%);
 }
 
+.finish{
+    animation: end 0.5s forwards ease-in;
+}
+@keyframes end {
+    0%{
+        opacity: 0;
+        transform:scale(0);
+    }
+    25%{
+        opacity: 0.2;
+        transform:scale(0.5);
+    }
+    50%{
+        opacity: 0.6;
+        transform:scale(1);
+    }
+    75%{
+        opacity: 0.8;
+        transform:scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+
 @media (max-width: 992px) {
     .next, .back{
         background-color: white;

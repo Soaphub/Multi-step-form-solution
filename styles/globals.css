@@ -44,6 +44,24 @@ body{
     flex-direction: column;
     justify-content:space-evenly;
     flex-grow: 1;
+    animation: pageview 0.5s forwards ease-in;
+}
+@keyframes pageview {
+    0%{ 
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 0.3;
+    }
+    75%{
+        
+        opacity: 0.6;
+    }
+    100%{
+        
+        opacity: 1;
+    }
 }
 
 h1{
@@ -127,6 +145,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     font-size: var(--font-size-md);
     font-weight: 500;
     color: hsl(354, 84%, 57%);
+    animation: pageview 0.5s forwards ease-in;
 }
 .plan-slected{
     display: none;
@@ -180,6 +199,9 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     border-color: #0d6efd;
     --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
     background-image: var(--bs-form-switch-bg);
+}
+#plan h3{
+    animation: pageview 0.5s forwards ease-in;
 }
 
 /* Add On's page  */
