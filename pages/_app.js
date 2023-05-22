@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '@/styles/globals.css';
 import Layout from '@/Components/Layout';
 import Head from "next/head";
 import { store } from '../redux/store';
