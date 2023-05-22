@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
-import '@/styles/globals.css';
+import '../styles/globals.css';
 import Head from "next/head";
 import Layout from '@/Components/Layout';
 import { store } from '../redux/store';
