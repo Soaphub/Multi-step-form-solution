@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
 	<>	
 		<Provider store={store}>
 			<Head>
-				<meta charset="utf-8" />
+				<meta charSet="utf-8" />
 			   	<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="description" content="Website for multipage form"/>
 				<meta name="keywords" content="Frontend Mentor, Multipage form app Landing Page Challenge"/>
