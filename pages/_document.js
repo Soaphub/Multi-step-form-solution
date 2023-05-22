@@ -3,15 +3,16 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="en">
-      	<Head >
-			
-		  	<meta charset="utf-8" />
-    		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    		<meta name="description"
-      			content="Website for multipage form"/>
-			<meta name="keywords"
-			content="Frontend Mentor, Multipage form app Landing Page Challenge"/>
-			
+		<Head>
+		<meta charset="utf-8" />
+		  <meta name="viewport" content="width=device-width, initial-scale=1" />
+		  <meta name="description"
+		content="Website for multipage form"/>
+		  <meta name="keywords"
+		  content="Frontend Mentor, Multipage form app Landing Page Challenge"/>
+		
+		<title>Multi Step Form</title>
+		<link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png"></link>
 		</Head>
       	<body>
     		<Main />
