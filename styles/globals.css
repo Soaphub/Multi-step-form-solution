@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 *{
     box-sizing: border-box;
@@ -21,6 +21,7 @@
 
     --width-lg: 60%;
 }
+
 
 body{
     background-color: hsl(217, 100%, 97%);
@@ -91,7 +92,7 @@ p{
     --lg: calc( 2 * var(--spacing-lg));
     --sm: calc( 2 * var(--spacing-xsm)); 
     height: calc( 100vh - calc( var(--lg) + var(--sm)));
-    background-image: url("../public/images/bg-sidebar-desktop.svg"); 
+    background-image: url("/images/bg-sidebar-desktop.svg"); 
     background-size: auto calc( 100vh - calc( var(--lg) + var(--sm)));
     background-repeat: no-repeat;
     border-radius: 10px;
@@ -269,7 +270,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     }
     .nav{
         height: auto;
-        background-image: url("../public/images/bg-sidebar-mobile.svg");
+        background-image: url("/images/bg-sidebar-mobile.svg");
         background-size: 100%;
         padding: var(--spacing-md) 0 var(--spacing-lg);
         border-radius: 0;
