@@ -170,8 +170,8 @@ const Plan = () => {
                 <h2 onClick={handleSwitch} className={yearly===false ? styles.editplan: ""}>Yearly</h2>
             </div> 
             <div className={styles.back}>
-                <button onClick={handleBack} className='btn btn-lg back-button'>Go Back</button>
-                <input type='submit' onClick={handleNext} className="btn btn-lg next-button" value="Next Step"></input>
+                <button onClick={handleBack} id="back-button" className='btn btn-lg'>Go Back</button>
+                <input type='submit' onClick={handleNext} id="next-button" className="btn btn-lg" value="Next Step"></input>
             </div>
         </form>
     </div>);

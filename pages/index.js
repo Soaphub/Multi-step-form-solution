@@ -64,7 +64,7 @@ const Index = () => {
 				</div>
 			</div>
 			<div className={styles.next}>
-				<input onClick={handleSubmit} type='submit' className="btn btn-lg next-button" value="Next Step"></input>
+				<input onClick={handleSubmit} type='submit' id="next-button" className="btn btn-lg" value="Next Step"></input>
 			</div>
 		</form>
 	</div>

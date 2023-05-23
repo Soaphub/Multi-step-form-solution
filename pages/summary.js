@@ -89,8 +89,8 @@ const Summary = () => {
                     </div>
                 </div> 
                 <div className={styles.back}>
-                    <button onClick={handleBack} className='btn btn-lg back-button'>Go Back</button>
-                    <button onClick={handleConfirm} className="btn btn-lg cofirm-button">Confirm</button>
+                    <button onClick={handleBack} id="back-button" className='btn btn-lg'>Go Back</button>
+                    <button onClick={handleConfirm} id="cofirm-button" className="btn btn-lg">Confirm</button>
                 </div>
             </>:
             <FinishingPage/>

@@ -64,8 +64,8 @@ const Addons = () => {
                 { yearly===true ?  <h3>+$20/yr</h3> : <h3>+$2/mo</h3> }
             </div> 
             <div className={styles.back}>
-                <button onClick={handleBack} className='btn btn-lg back-button'>Go Back</button>
-                <input onClick={handleNext} type='submit' className="btn btn-lg next-button" value="Next Step"></input>
+                <button onClick={handleBack} id="back-button" className='btn btn-lg'>Go Back</button>
+                <input onClick={handleNext} type='submit' id="next-button" className="btn btn-lg" value="Next Step"></input>
             </div>
         </form>
     </div>

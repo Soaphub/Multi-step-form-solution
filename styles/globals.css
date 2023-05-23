@@ -23,7 +23,7 @@
 }
 
 
-body{
+html body{
     background-color: hsl(217, 100%, 97%);
     font-family: 'Ubuntu', sans-serif;
     width: var(--width-lg);
@@ -67,22 +67,22 @@ body{
     }
 }
 
-h1{
+.content h1{
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: hsl(213, 96%, 18%);
 }
-h2, .card-title{
+.content h2, .card-title{
     font-size: var(--font-size-md);
     font-weight: 700;
     color: hsl(213, 96%, 30%);
 }
-h3{
+.content h3{
     font-size: var(--font-size-sm);
     font-weight: 500;
     color: hsl(213, 96%, 30%);
 }
-p{
+.content p{
     font-size: var(--font-size-sm);
     color: hsl(231, 11%, 63%);
 }
@@ -155,30 +155,30 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
 }
 
 /* Buttons */
-.next-button, .back-button, .cofirm-button{
+#next-button, #back-button, #cofirm-button{
     font-family: 'Ubuntu', sans-serif;
     font-size: var(--font-size-md);
     font-weight: 500;
 }
-.next-button{
+#next-button{
     background-color: hsl(213, 96%, 18%);
     color: white;
 }
-.next-button:hover{
+#next-button:hover{
     background-color: hsl(213, 96%, 30%);
     color: white;
 }
-.back-button{
+#back-button{
     color: hsl(231, 11%, 63%);
 }
-.back-button:hover{
+#back-button:hover{
     color: hsl(213, 96%, 18%);
 }
-.cofirm-button{
+#cofirm-button{
     background-color: hsl(243, 100%, 62%);
     color: white;
 }
-.cofirm-button:hover{
+#cofirm-button:hover{
     color: white;
     background-color: hsl(243, 100%, 75%);;
 }
@@ -192,7 +192,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     background-color: hsl(231, 100%, 99%);
     border: 0.1rem solid hsl(213, 96%, 30%);
 }
-.plan-icon{
+#plan .plan-icon{
     width: var(--image-width-sm);
     height: var(--image-width-sm);
 }
@@ -216,6 +216,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     padding-left: var(--spacing-md);
     padding-right: var(--spacing-xsm);
     border: 0.05rem solid hsl(229, 24%, 87%);
+    cursor: pointer;
 }
 #add-ons .form-check.checked{
     background-color: hsl(231, 100%, 99%);
@@ -246,7 +247,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
 
 
 @media (max-width: 992px) {
-    body{
+    html body{
         padding: 0;
         width: 100%;
         background-color: white;
@@ -254,7 +255,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     .main{
         padding: 0 16px;
     }
-    h1{
+    .content h1{
         font-size: var(--font-size-lg);
     }
     .conatiner{
