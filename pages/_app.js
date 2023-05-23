@@ -1,17 +1,17 @@
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import '@/styles/globals.css';
+import "bootstrap/dist/css/bootstrap.css";
 import Layout from '@/Components/Layout';
 import { store } from '../redux/store';
 import { Provider } from 'react-redux';
 import Script from 'next/script';
 import Head from "next/head";
 import { useEffect } from 'react';
+import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }) {
 
 	useEffect(()=>{
-		import("bootstrap/dist/css/bootstrap.min.css");
+		import("bootstrap/dist/css/bootstrap.css");
 	},[])
 
   	return (
