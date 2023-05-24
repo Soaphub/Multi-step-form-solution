@@ -67,22 +67,22 @@ html body{
     }
 }
 
-.content h1{
+.content h1, .pop-Up h1{
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: hsl(213, 96%, 18%);
 }
-.content h2, .card-title{
+.content h2, .pop-Up h2, .card-title{
     font-size: var(--font-size-md);
     font-weight: 700;
     color: hsl(213, 96%, 30%);
 }
-.content h3{
+.content h3, .pop-Up h3{
     font-size: var(--font-size-sm);
     font-weight: 500;
     color: hsl(213, 96%, 30%);
 }
-.content p{
+.content p, .pop-Up p{
     font-size: var(--font-size-sm);
     color: hsl(231, 11%, 63%);
 }
@@ -250,45 +250,59 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     html body{
         padding: 0;
         width: 100%;
-        background-color: white;
+        background-image: url("/images/bg-sidebar-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: hsl(217, 100%, 97%);
     }
-    .main{
-        padding: 0 16px;
-    }
-    .content h1{
+    .pop-Up h1{
         font-size: var(--font-size-lg);
     }
     .conatiner{
-        background-color: hsl(217, 100%, 97%);
         padding: 0 16px;
+        background-color: transparent;
         border-radius: 0;
     }
-    .layout > div, .nav ul{
+    .layout > div{
         padding: 0;
     }
     .nav ul{
-        margin-top: var(--spacing-sm);
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: space-evenly !important;
+    }
+    .nav ul li{
+        margin: 0;
     }
     .nav{
         height: auto;
-        background-image: url("/images/bg-sidebar-mobile.svg");
-        background-size: 100%;
-        padding: var(--spacing-md) 0 var(--spacing-lg);
+        background-image: none;
+        margin-top: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
         border-radius: 0;
-    }
-    .nav li a{
-        margin: var(--spacing-xsm);
     }
 
     .pop-Up{
         background-color: white;
-        position: relative;
+        position: absolute;
         padding: var(--spacing-md) var(--spacing-sm);
-        margin-bottom: calc( var(--spacing-lg) * 1.5);
-        top: -10%;
+        margin-bottom: var(--spacing-lg);
+        top: 20%;
         left: 50%;
         transform: translate(-50%);
         border-radius: 10px;
+        width: var(--width-lg);
+    }
+
+    #add-ons .form-check {
+        padding: 0 var(--spacing-xsm);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .form-check .form-check-input {
+        margin-left: -0.25rem;
     }
 }
 
@@ -301,8 +315,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     --spacing-xxsm: 0.3rem;
     
     --font-size-lg: 1.4rem;
-    --font-size-md: 0.9rem;
-    --font-size-sm: 0.9rem;
+    --font-size-md: 0.85rem;
+    --font-size-sm: 0.8rem;
+
+    --width-lg: 90%;
     }
 }
 
@@ -314,9 +330,11 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
     --spacing-xsm: 1rem;
     --spacing-xxsm: 0.6rem;
     
-    --font-size-lg: 1.8rem;
-    --font-size-md: 1.3rem;
-    --font-size-sm: 1rem;
+    --font-size-lg: 1.6rem;
+    --font-size-md: 1.1rem;
+    --font-size-sm: 0.9rem;
+
+    --width-lg: 80%;
     }
 }
 
@@ -330,8 +348,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
         --spacing-xxsm: 0.7rem;
     
         --font-size-lg: 1.9rem;
-        --font-size-md: 1.4rem;
+        --font-size-md: 1.3rem;
         --font-size-sm: 1.1rem;
+
+        --width-lg: 70%;
     }
 }
 

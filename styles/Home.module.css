@@ -16,6 +16,10 @@
     color: hsl(231, 11%, 63%);
 }
 
+.addons{
+    padding: 0 var(--spacing-xsm);
+}
+
 .addons h2, .addons p{
     margin: var(--spacing-xsm) 0;
 }
@@ -65,7 +69,7 @@
 
 @media (max-width: 992px) {
     .next, .back{
-        background-color: white;
+        background-color: hsl(217, 100%, 97%);
         position: absolute;
         margin-top:calc( var(--spacing-lg) * 2);
         left: 50%;
