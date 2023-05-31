@@ -301,7 +301,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
 }
 
 @media (max-width: 575.98px) {
-    .form-check .form-check-input {
+    #one-check, #sec-check, #trd-check{
         margin-left: -0.25rem;
     }
 }
